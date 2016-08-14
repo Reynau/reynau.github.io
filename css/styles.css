@@ -4,6 +4,8 @@ body {
   margin-bottom: 4em;
 }
 
+
+
 h1 {
   text-align: center;
 }
@@ -16,18 +18,22 @@ h2 {
   margin-top: 1em;
   text-align: justify;
 }
-
 .about {
   margin-top: 2em;
-  padding-left: 30%;
 }
-.about a {
-  text-decoration: inherit;
-}
-
 .body {
   text-align: justify;
-  padding-left: 30%;
+}
+
+@media only screen and (min-device-width: 620px) {
+  #curriculum {
+    width: 35%;
+    margin: 0 auto;
+  }
+}
+
+.about a {
+  text-decoration: inherit;
 }
 
 .contact a {
