@@ -52,7 +52,11 @@ ul li {
   transform: scale(1.1);
 }
 
-@media only screen and (min-device-width: 620px) {
+.giant {
+  font-size: 25em;
+}
+
+@media only screen and (min-device-width: 768px) {
   body {
     font-size: 1.7em;
   }
@@ -60,13 +64,21 @@ ul li {
     width: 35%;
     margin: 0 auto;
   }
+  #myimg {
+    width: 281px;
+    height: 225px;
+  }
 }
-@media only screen and (max-device-width: 620px) {
+@media only screen and (max-device-width: 768px) {
   h2 i {
     width: 1.7em;
   }
   i {
     width: 2.5em;
+  }
+  #myimg {
+    width: 50%;
+    height: auto;
   }
 }
 
