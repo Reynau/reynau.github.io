@@ -1,6 +1,5 @@
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.7em;
   margin-bottom: 4em;
 }
 
@@ -54,9 +53,20 @@ ul li {
 }
 
 @media only screen and (min-device-width: 620px) {
+  body {
+    font-size: 1.7em;
+  }
   #curriculum {
     width: 35%;
     margin: 0 auto;
+  }
+}
+@media only screen and (max-device-width: 620px) {
+  h2 i {
+    width: 1.7em;
+  }
+  i {
+    width: 2.5em;
   }
 }
 
