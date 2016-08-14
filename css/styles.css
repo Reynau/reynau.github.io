@@ -1,0 +1,56 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.7em;
+  margin-bottom: 4em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+}
+
+.header {
+  margin-top: 1em;
+  text-align: justify;
+}
+
+.about {
+  margin-top: 2em;
+  padding-left: 30%;
+}
+.about a {
+  text-decoration: inherit;
+}
+
+.body {
+  text-align: justify;
+  padding-left: 30%;
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.img-circle {
+  border-radius:10%;
+}
+#myimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+  margin-left: 1.5em;
+}
