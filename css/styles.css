@@ -38,10 +38,21 @@ h2 {
 .img-circle {
   border-radius:10%;
 }
+
 #myimg {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.float{
+    position:fixed;
+    bottom: 5%;
+    right: 5%;
+    transition: all .2s ease-in-out;
+}
+.float:hover {
+  transform: scale(1.1);
 }
 
 ul {
