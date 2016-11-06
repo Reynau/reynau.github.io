@@ -1,5 +1,6 @@
 body {
   font-family: 'Raleway', sans-serif;
+  color: white;
   margin-bottom: 4em;
 }
 
@@ -15,6 +16,15 @@ ul {
 
 ul li {
   margin-left: 1.5em;
+}
+
+canvas {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
 }
 
 .header {
@@ -39,7 +49,7 @@ ul li {
 }
 
 .img-circle {
-  border-radius:10%;
+  border-radius: 5%;
 }
 
 .float{
@@ -50,6 +60,10 @@ ul li {
 }
 .float:hover {
   transform: scale(1.1);
+}
+
+.color-white {
+  color: white;
 }
 
 .giant {
