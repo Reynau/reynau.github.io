@@ -15,53 +15,58 @@
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/e0df85f983.js"></script>
-<body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
-  <script src="space/src/space.js"></script>
+</head>
+<body class="container-fluid">
+  <!--<script src="space/src/space.js"></script>-->
+  <script src="js/space.js"></script>
   <!-- Here will be centered and fitted content -->
-  <div class="container-fluid">
-      <div id="curriculum">
-        <div class="header">
-          <img id="myimg" class="img-circle img-responsive" src="img/myself.jpg">
-          <h1>XAVIER LOPEZ REYNAU</h1>
-          <span class="about">
-            <small>
-              <p>Studying Computer Science at <a href="http://www.upc.edu/">UPC</a> (Barcelona).<br>
-              Actually working at <a href="http://inlab.fib.upc.es/es">InLab</a> as Full-Stack developer.</p>
-            </small>
-          </span>
-        </div>
-        <div class="body">
-          <div class="interests">
-            <ul><h2>What I <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> to do:</h2>
-              <li><i class="fa fa-code" aria-hidden="true"></i> Hacking</li>
-              <li><i class="fa fa-gamepad" aria-hidden="true"></i> Videogames</li>
-              <li><i class="fa fa-commenting-o" aria-hidden="true"></i> Socialize</li>
-              <li><i class="fa fa-futbol-o" aria-hidden="true"></i> Sports</li>
-            </ul>
-          </div>
-          <div class="knowledges">
-            <ul><h2>What I'm good with:</h2>
-              <li>Full-Stack web development with HTML5, Javascript, CSS3 and PHP.</li>
-              <li>Native Android apps development.</li>
-              <li>Desktop apps development with Java and C/C++.</li>
-            </ul>
-          </div>
-          <div class="contact">
-            <ul><h2>Contact me:</h2>
-              <li><a href="https://www.facebook.com/xavilopezreynau"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
-              <li><a href="https://es.linkedin.com/in/xavier-lopez-reynau"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
-              <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-              <li class="visible-xs-* visible-sm-* hidden-lg hidden-md"><a href="https://github.com/Reynau"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  </div>
-  <div class="float ">
-    <a href="https://github.com/Reynau">
-      <i class="fa fa-4x fa-github hidden-xs hidden-sm color-white" aria-hidden="true"></i>
-    </a>
-  </div>
+  <header>
+    <img id="myimg" class="img-circle" src="img/myself.jpg">
+    <h1>XAVIER LOPEZ REYNAU</h1>
+    <span class="about">
+        Studying Computer Science at UPC (Barcelona).<br>
+        Actually working at InLab as Full-Stack developer.
+    </span>
+  </header>
+
+  <section id="curriculum" class="body">
+    <div class="interests">
+      <h2>What I <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> to do:</h2>
+      <ul>
+        <li><i class="fa fa-code" aria-hidden="true"></i> Hacking</li>
+        <li><i class="fa fa-gamepad" aria-hidden="true"></i> Videogames</li>
+        <li><i class="fa fa-commenting-o" aria-hidden="true"></i> Socialize</li>
+        <li><i class="fa fa-futbol-o" aria-hidden="true"></i> Sports</li>
+      </ul>
+    </div>
+    <div class="knowledges">
+      <h2>What I'm good with:</h2>
+      <ul>
+        <li>Full-Stack web development with HTML5, Javascript, CSS3 and PHP.</li>
+        <li>Native Android apps development.</li>
+        <li>Desktop apps development with Java and C/C++.</li>
+      </ul>
+    </div>
+    <div class="projects">
+      <h2>What I built:</h2>
+      <ul>
+        <li><a href="https://github.com/Reynau/fibemon">Fibemon</a></li>
+        <li><a href="https://github.com/Reynau/treasure-hunter">Treasure Hunter Platform Game</a></li>
+        <li><a href="https://github.com/Reynau/paint_war">Paint War Multiplayer Game</a></li>
+        <li><a href="https://github.com/Reynau/space">Space.js</a></li>
+        <li><a href="https://github.com/Reynau/S4U">S4U (Speech For You)</a></li>
+      </ul>
+    </div>
+    <div class="contact">
+      <h2>Contact me:</h2>
+      <ul>
+        <li><a href="https://github.com/Reynau"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://es.linkedin.com/in/xavier-lopez-reynau"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
+        <li><a href="https://www.facebook.com/xavilopezreynau"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      </ul>
+    </div>
+  </section>
 </body>
 </html>

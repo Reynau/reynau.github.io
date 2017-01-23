@@ -1,10 +1,27 @@
+@media only screen and (max-device-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+  body {
+    font-size: 2.5em;
+  }
+  #myimg {
+    width: 50%;
+    height: auto;
+  }
+}
+
+
 body {
   font-family: 'Raleway', sans-serif;
   color: white;
   margin-bottom: 4em;
 }
 
-h1 { text-align: center; }
+header {
+  text-align: center;
+}
+
 h2 { font-family: 'Lobster', cursive; }
 
 ul {
@@ -27,10 +44,6 @@ canvas {
   z-index:-1;
 }
 
-.header {
-  margin-top: 1em;
-  text-align: justify;
-}
 .about {
   margin-top: 2em;
   text-align: center;
@@ -39,17 +52,13 @@ canvas {
   text-align: justify;
 }
 
-.about a {
-  text-decoration: inherit;
-}
-
-.contact a {
+a {
   color: inherit;
   text-decoration: inherit;
 }
 
 .img-circle {
-  border-radius: 5%;
+  border-radius: 1%;
 }
 
 .float{
@@ -81,18 +90,6 @@ canvas {
   #myimg {
     width: 281px;
     height: 225px;
-  }
-}
-@media only screen and (max-device-width: 768px) {
-  h2 i {
-    width: 1.7em;
-  }
-  i {
-    width: 2.5em;
-  }
-  #myimg {
-    width: 50%;
-    height: auto;
   }
 }
 
