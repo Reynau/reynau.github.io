@@ -25,9 +25,10 @@
 /* Nav Icon */
 #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
     width: 30px;
-    height: 45px;
+    height: 25px;
     position: relative;
     /*margin: 50px auto;*/
+    margin-top: 25px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
