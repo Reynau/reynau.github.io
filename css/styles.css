@@ -1,100 +1,82 @@
-@media only screen and (max-device-width: 768px) {
-  h1 {
-    font-size: 3em;
-  }
-  body {
-    font-size: 2.5em;
-  }
-  #myimg {
-    width: 50%;
-    height: auto;
-  }
-}
-
-
-body {
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  margin-bottom: 4em;
-}
-
-header {
-  text-align: center;
-}
-
-h2 { font-family: 'Lobster', cursive; }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-ul li {
-  margin-left: 1.5em;
-}
-
-canvas {
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
-}
-
-.about {
-  margin-top: 2em;
-  text-align: center;
-}
-.body {
-  text-align: justify;
+html, body {
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    color: #555;
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+    color: #555;
+    text-decoration: none;
+}
+a:hover {
+    color: #555;
+    text-decoration: none;
 }
 
-.img-circle {
-  border-radius: 1%;
+.bottom-padding {
+    padding-bottom: 20px;
 }
 
-.float{
-    position:fixed;
-    bottom: 5%;
-    right: 5%;
-    transition: all .2s ease-in-out;
+
+/* http://ianlunn.github.io/Hover/ */
+/* Underline From Center */
+.underline {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
 }
-.float:hover {
-  transform: scale(1.1);
+.underline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #888;
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.underline:hover:before, .underline:focus:before, .underline:active:before {
+    left: 0;
+    right: 0;
 }
 
-.color-white {
-  color: white;
+/* Overline From Center */
+.overline {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
 }
-
-.giant {
-  font-size: 25em;
+.overline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    background: #888;
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
-
-@media only screen and (min-device-width: 768px) {
-  body {
-    font-size: 1.7em;
-  }
-  #curriculum {
-    width: 35%;
-    margin: 0 auto;
-  }
-  #myimg {
-    width: 281px;
-    height: 225px;
-  }
-}
-
-#myimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.overline:hover:before, .overline:focus:before, .overline:active:before {
+    left: 0;
+    right: 0;
 }

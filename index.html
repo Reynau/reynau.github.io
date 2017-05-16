@@ -1,71 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Xavier Lopez Reynau</title>
 
-  <!-- StyleSheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/custom-bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Cookie|Josefin+Slab|Lobster|Open+Sans+Condensed:300|Playfair+Display|Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/e0df85f983.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
-<body class="container-fluid">
-  <script src="space/src/space.js"></script>
-  <!-- Here will be centered and fitted content -->
-  <header>
-    <img id="myimg" class="img-circle" src="img/myself.jpg">
-    <h1>XAVIER LOPEZ REYNAU</h1>
-    <span class="about">
-        Studying Computer Science at UPC (Barcelona).<br>
-        Actually working at InLab as Full-Stack developer.
-    </span>
-  </header>
+<body>
+<nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-  <section id="curriculum" class="body">
-    <div class="interests">
-      <h2>What I <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> to do:</h2>
-      <ul>
-        <li><i class="fa fa-code" aria-hidden="true"></i> Hacking</li>
-        <li><i class="fa fa-gamepad" aria-hidden="true"></i> Videogames</li>
-        <li><i class="fa fa-commenting-o" aria-hidden="true"></i> Socialize</li>
-        <li><i class="fa fa-futbol-o" aria-hidden="true"></i> Sports</li>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a class="underline" href="#">Home<span class="sr-only">(current)</span></a></li>
+        <li><a class="underline" href="#">Portfolio</a></li>
+        <li><a class="underline" href="#">Blog</a></li>
       </ul>
-    </div>
-    <div class="knowledges">
-      <h2>What I'm good with:</h2>
-      <ul>
-        <li>Full-Stack web development with HTML5, Javascript, CSS3 and PHP.</li>
-        <li>Native Android apps development.</li>
-        <li>Desktop apps development with Java and C/C++.</li>
-      </ul>
-    </div>
-    <div class="projects">
-      <h2>What I built:</h2>
-      <ul>
-        <li><a href="https://github.com/Reynau/fibemon">Fibemon</a></li>
-        <li><a href="https://github.com/Reynau/treasure-hunter">Treasure Hunter Platform Game</a></li>
-        <li><a href="https://github.com/Reynau/paint_war">Paint War Multiplayer Game</a></li>
-        <li><a href="https://github.com/Reynau/space">Space.js</a></li>
-        <li><a href="https://github.com/Reynau/S4U">S4U (Speech For You)</a></li>
-      </ul>
-    </div>
-    <div class="contact">
-      <h2>Contact me:</h2>
-      <ul>
-        <li><a href="https://github.com/Reynau"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
-        <li><a href="https://es.linkedin.com/in/xavier-lopez-reynau"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/xavilopezreynau"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
-        <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-      </ul>
-    </div>
-  </section>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+  <div class="row text-center">
+    <h1>Xavier Lopez Reynau<br><small>Computer Science student & Full Stack developer</small></h1>
+  </div>
+</div>
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
