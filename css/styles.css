@@ -1,26 +1,21 @@
-/* Background from: http://www.heropatterns.com/ */
-
 html, body {
     font-family: 'Raleway', sans-serif;
     font-size: large;
     color: #555;
 }
-
-
-.project {
+.header, .project {
     text-align: center;
 }
-.project a {
-    font-weight: bold;
+.header p {
+    font-size: 23px;
 }
-.project-img {
-
+.projects {
+    margin-bottom: 30px;
+}
+.project-title, .project-body {
+    padding-bottom: 10px;
 }
 .project-title {
     font-size: 1.2rem;
     font-weight: bold;
-    padding-bottom: 10px;
-}
-.project-sources {
-    padding-top: 10px;
 }
