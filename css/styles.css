@@ -3,6 +3,14 @@ html, body {
     font-size: large;
     color: #555;
 }
+h1 {
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+p {
+    margin: 0 0 10px;
+}
 .header, .project {
     text-align: center;
 }
