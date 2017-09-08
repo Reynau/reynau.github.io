@@ -1,29 +1,51 @@
-html, body {
-    font-family: 'Raleway', sans-serif;
+body, html {
+    font-family: Raleway, sans-serif;
     font-size: large;
-    color: #555;
+    color: #555
 }
+
 h1 {
     font-weight: 500;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
+
 p {
-    margin: 0 0 10px;
+    margin: 0 0 10px
 }
+
 .header, .project {
-    text-align: center;
+    text-align: center
 }
+
 .header p {
-    font-size: 23px;
+    font-size: 23px
 }
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+.header li {
+    display: inline;
+}
+.header li:not(:first-child) {
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #555555;
+}
+
 .projects {
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
-.project-title, .project-body {
-    padding-bottom: 10px;
+
+.project-body, .project-title {
+    padding-bottom: 10px
 }
+
 .project-title {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700
 }
