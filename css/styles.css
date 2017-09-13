@@ -41,11 +41,58 @@ p {
     margin-bottom: 30px
 }
 
+
+.project {
+    margin-top: 15px;
+}
 .project-body, .project-title {
     padding-bottom: 10px
+}
+.project-links, .project-links a {
+    position: absolute;
+}
+.project-links {
+    top: 0;
+    right: 15px;
+    left: 15px;
+}
+.project-links a {
+    background-color: rgba(0,0,0,0.5);
+    width: 25%;
+    border-radius: 2px;
+    padding: 5px 0;
+    margin: 5px;
+    color: white;
+    border: 1px white solid;
+    transition: background-color 300ms, box-shadow 300ms;
+    -webkit-transition: background-color 300ms, box-shadow 300ms; /* Safari */
+}
+.project-links a:hover {
+    background-color: rgba(85,85,85,1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-play {
+    right: 0;
+}
+.project-github {
+    left: 0;
+}
+.project-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    margin: 0 15px;
 }
 
 .project-title {
     font-size: 1.2rem;
     font-weight: 700
+}
+.project-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
 }

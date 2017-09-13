@@ -5,9 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="preload" href="css/styles.min.css" as="style">
-  <link rel="preload" href="css/bootstrap.min.css" as="style">
-
   <meta property="og:url" content="https://lopezreynau.me/">
   <meta property="og:title" content="Xavier Lopez Reynau">
   <meta property="og:type" content="website">
@@ -15,7 +12,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 
   <title>Xavier Lopez Reynau</title>
 </head>
@@ -41,80 +38,85 @@
       <div class="row">
         <div class="projects-body">
           <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="" />
-            <div class="project-title">Paint War</div>
-            <div class="project-body">
-              Paint War is an online multiplayer browser game where your objective is to paint more tiles than the enemy team. Is the first game I developed! 😃
-              <br><br>
-              Do you want to try it? <a href="https://paintwar.herokuapp.com/">Play it on Heroku!</a>
+            <img class="project-img img-responsive" src="images/paintwar.png" />
+            <div class="project-info">
+              <div class="project-title">Paint War</div>
+              <div class="project-body">
+                Online multiplayer game where you have to paint more tiles than the enemy team.
+              </div>
             </div>
-            <div class="project-sources">
-              <a href="https://github.com/Reynau/paint_war"><i class="fa fa-github"></i> GitHub</a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="" />
-            <div class="project-title">The Game</div>
-            <div class="project-body">
-              The Game is a proof of concept, still in development, for a tile-based browser RPG Zelda-like game. Hint: You can try to get all the hearts and coins!
-              <br><br>
-              You can try it <a href="http://lopezreynau.me/the-game/">here</a>!
-            </div>
-            <div class="project-sources">
-              <a href="https://github.com/Reynau/the-game"><i class="fa fa-github"></i> GitHub</a>
+            <div class="project-links">
+              <a class="project-play" href="https://paintwar.herokuapp.com/"><i class="fa fa-play"></i></a>
+              <a class="project-github" href="https://github.com/Reynau/paint_war"><i class="fa fa-git"></i></a>
             </div>
           </div>
 
           <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="" />
-            <div class="project-title">Space</div>
-            <div class="project-body">
-              Space is a canvas animated background for your websites! Actually used by <a href="https://hackcu.org/">HackCu</a> as background for their website! 😃<br>Take a look on it!
-              <br><br>
-              Do you want to see it? <a href="http://lopezreynau.me/space/">Example here</a>!
+            <img class="project-img" src="images/thegame.gif" />
+            <div class="project-info">
+              <div class="project-title">The Game</div>
+              <div class="project-body">
+                Proof of concept for a tile-based browser RPG Zelda-like game.
+              </div>
             </div>
-            <div class="project-sources">
-              <a href="https://github.com/Reynau/space"><i class="fa fa-github"></i> GitHub</a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="" />
-            <div class="project-title">Reactor</div>
-            <div class="project-body">
-              Reactor is a simple 3D music visualizer. It works modifying the sphere using Perlin noise and the song frequency intensities as multipliers!
-              <br><br>
-              You can try it <a href="http://lopezreynau.me/Reactor/">here</a>!
-            </div>
-            <div class="project-sources">
-              <a href="https://github.com/Reynau/Reactor"><i class="fa fa-github"></i> GitHub</a>
+            <div class="project-links">
+              <a class="project-play" href="http://lopezreynau.me/the-game/"><i class="fa fa-play"></i></a>
+              <a class="project-github" href="https://github.com/Reynau/the-game"><i class="fa fa-git"></i></a>
             </div>
           </div>
 
           <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="" />
-            <div class="project-title">Space3D VR</div>
-            <div class="project-body">
-              Space3D VR is a project to see my <a href="https://github.com/Reynau/space">Space</a> background in 3D and using Virtual Reality! To try it, you need to have a cardboard!<br>You can find one in <a href="https://www.amazon.es/s/field-keywords=cardboard">Amazon</a>
-              <br><br>
-              You can try it <a href="http://lopezreynau.me/Space3D_VR/">here</a>!
+            <img class="project-img" src="images/space.gif" />
+            <div class="project-info">
+              <div class="project-title">Space</div>
+              <div class="project-body">
+                Canvas animated background for websites. Actually used by <a href="https://hackcu.org/">HackCu</a>
+              </div>
             </div>
-            <div class="project-sources">
-              <a href="https://github.com/Reynau/Space3D_VR"><i class="fa fa-github"></i> GitHub</a>
+            <div class="project-links">
+              <a class="project-play" href="http://lopezreynau.me/space/"><i class="fa fa-play"></i></a>
+              <a class="project-github" href="https://github.com/Reynau/space"><i class="fa fa-git"></i></a>
             </div>
           </div>
 
           <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="" />
-            <div class="project-title">Speak For You (S4U)</div>
-            <div class="project-body">
-              S4U is a tool to help mute people to communicate with people that don't speak sign-language. It translates in real time sign-language to voice!
-              <br><br>
-              To try it, build the project from GitHub!
+            <img class="project-img" src="images/reactor.gif" />
+            <div class="project-info">
+              <div class="project-title">Reactor</div>
+              <div class="project-body">
+                Spherical 3D music visualizer that modifies the sphere shape at the song rhythm.
+              </div>
             </div>
-            <div class="project-sources">
-              <a href="https://github.com/Reynau/S4U"><i class="fa fa-github"></i> GitHub</a>
+            <div class="project-links">
+              <a class="project-play" href="http://lopezreynau.me/Reactor/"><i class="fa fa-play"></i></a>
+              <a class="project-github" href="https://github.com/Reynau/Reactor"><i class="fa fa-git"></i></a>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-4 project">
+            <img class="project-img" src="images/gem3d.gif" />
+            <div class="project-info">
+              <div class="project-title">Gem 3D</div>
+              <div class="project-body">
+                Simulates a red gem levitating over a platform. Still in development.
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-play" href="http://lopezreynau.me/Gem3D/"><i class="fa fa-play"></i></a>
+              <a class="project-github" href="https://github.com/Reynau/Gem3D"><i class="fa fa-git"></i></a>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-4 project">
+            <img class="project-img" src="images/s4u.gif" />
+            <div class="project-info">
+              <div class="project-title">Speak For You (S4U)</div>
+              <div class="project-body">
+                Tool that translates in real time sign-language to voice.
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-github" href="https://github.com/Reynau/S4U"><i class="fa fa-git"></i></a>
             </div>
           </div>
         </div>
