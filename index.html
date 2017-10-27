@@ -1,140 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:url" content="https://lopezreynau.me/">
-  <meta property="og:title" content="Xavier Lopez Reynau">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Computer Science student & Full Stack developer">
-
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/menu.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Vollkorn" rel="stylesheet">
 
   <title>Xavier Lopez Reynau</title>
 </head>
-
 <body>
-  <section class="header">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>Xavier Lopez Reynau</h1>
-          <p>Computer Science Student<br>Full-Stack Developer</p>
-          <ul>
-            <li><a href="https://github.com/Reynau"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/xavier-lopez-reynau/"><i class="fa fa-linkedin-square"></i></a></li>
-            <li><a href="https://medium.com/@xavi.lopez.reynau"><i class="fa fa-medium"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="projects">
-    <div class="container">
-      <div class="row">
-        <div class="projects-body">
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img img-responsive" src="images/paintwar.png" />
-            <div class="project-info">
-              <div class="project-title">Paint War</div>
-              <div class="project-body">
-                Online multiplayer game where you have to paint more tiles than the enemy team.
-              </div>
-            </div>
-            <div class="project-links">
-              <a class="project-play" href="https://paintwar.herokuapp.com/"><i class="fa fa-play"></i></a>
-              <a class="project-github" href="https://github.com/Reynau/paint_war"><i class="fa fa-git"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="images/thegame.gif" />
-            <div class="project-info">
-              <div class="project-title">The Game</div>
-              <div class="project-body">
-                Proof of concept for a tile-based browser RPG Zelda-like game.
-              </div>
-            </div>
-            <div class="project-links">
-              <a class="project-play" href="http://lopezreynau.me/the-game/"><i class="fa fa-play"></i></a>
-              <a class="project-github" href="https://github.com/Reynau/the-game"><i class="fa fa-git"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="images/space.gif" />
-            <div class="project-info">
-              <div class="project-title">Space</div>
-              <div class="project-body">
-                Canvas animated background for websites. Actually used by <a href="https://hackcu.org/">HackCu</a>
-              </div>
-            </div>
-            <div class="project-links">
-              <a class="project-play" href="http://lopezreynau.me/space/"><i class="fa fa-play"></i></a>
-              <a class="project-github" href="https://github.com/Reynau/space"><i class="fa fa-git"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="images/reactor.gif" />
-            <div class="project-info">
-              <div class="project-title">Reactor</div>
-              <div class="project-body">
-                Spherical 3D music visualizer that modifies the sphere shape at the song rhythm.
-              </div>
-            </div>
-            <div class="project-links">
-              <a class="project-play" href="http://lopezreynau.me/Reactor/"><i class="fa fa-play"></i></a>
-              <a class="project-github" href="https://github.com/Reynau/Reactor"><i class="fa fa-git"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="images/gem3d.gif" />
-            <div class="project-info">
-              <div class="project-title">Gem 3D</div>
-              <div class="project-body">
-                Simulates a red gem levitating over a platform. Still in development.
-              </div>
-            </div>
-            <div class="project-links">
-              <a class="project-play" href="http://lopezreynau.me/Gem3D/"><i class="fa fa-play"></i></a>
-              <a class="project-github" href="https://github.com/Reynau/Gem3D"><i class="fa fa-git"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4 project">
-            <img class="project-img" src="images/s4u.gif" />
-            <div class="project-info">
-              <div class="project-title">Speak For You (S4U)</div>
-              <div class="project-body">
-                Tool that translates in real time sign-language to voice.
-              </div>
-            </div>
-            <div class="project-links">
-              <a class="project-github" href="https://github.com/Reynau/S4U"><i class="fa fa-git"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script src="https://use.fontawesome.com/c8270c61d7.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-105745462-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
+<div class="start">
+  <div class="center">
+    <h1>Xavier Lopez Reynau</h1>
+    <h3>Software Developer</h3>
+    <ul class="menu">
+      <li><a href="https://github.com/Reynau" target="_blank">GitHub</a></li><li><a onclick="openNav()">Portfolio</a></li><li><a href="https://www.linkedin.com/in/xavier-lopez-reynau/" target="_blank">LinkedIn</a></li>
+    </ul>
+  </div>
+</div>
+<div id="portfolio">
+  <div class="container">
+    <h3>Portfolio</h3>
+    <ul class="projects">
+      <li><a href="https://devpost.com/software/flight-advisor-usblv5" target="_blank">Flight Advisor</a></li>
+      <li><a href="https://paintwar.herokuapp.com/" target="_blank">Paint War</a></li>
+      <li><a href="http://lopezreynau.me/the-game/" target="_blank">The Game</a></li>
+      <li><a href="http://lopezreynau.me/space/" target="_blank">Space</a></li>
+      <li><a href="http://lopezreynau.me/Reactor/" target="_blank">Reactor</a></li>
+      <li><a href="http://lopezreynau.me/Gem3D/" target="_blank">Gem 3D</a></li>
+      <li><a href="https://devpost.com/software/s4u" target="_blank">Speak For You</a></li>
+    </ul>
+  </div>
+  <a onclick="closeNav()" class="close"></a>
+</div>
 </body>
 </html>
