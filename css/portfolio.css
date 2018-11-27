@@ -1,0 +1,26 @@
+.glider {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Playfair Display', serif;
+}
+
+.glider div {
+  padding: 30px;
+}
+
+.glider div h3 {
+  font-size: 90px;
+}
+
+.glider div img {
+  width: 70%;
+}
+
+.glider-next, .glider-prev {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 80px;
+}
+
+.glider-slide {
+  background-color: transparent;
+}
+/*# sourceMappingURL=portfolio.css.map */
