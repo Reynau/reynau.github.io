@@ -7,7 +7,7 @@ html, body {
 }
 
 html {
-  padding: 80px;
+  padding: 40px;
   background: #1a162a;
   /* Old browsers */
   background: -moz-linear-gradient(45deg, #1a162a 0%, #1d006c 100%);
@@ -21,21 +21,30 @@ html {
 }
 
 body {
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
   transition: 0.4s;
 }
 
 main {
-  margin-top: -37px;
+  margin-top: -17px;
   display: grid;
   grid-template-rows: min-content auto;
   height: 100%;
+  padding: 0 15px;
+}
+
+main h2 {
+  font-size: 28px;
+}
+
+main p {
+  font-size: 18px;
 }
 
 .white-background {
-  background: #d2caf1;
+  background: #dedaec;
   /* Old browsers */
   background: -moz-linear-gradient(45deg, #d2caf1 0%, #f1d7d7 100%);
   /* FF3.6-15 */
@@ -48,19 +57,27 @@ main {
   transition: background 4000ms linear;
 }
 
-.dark-border {
-  border: 1px solid rgba(57, 57, 57, 0.85);
+.white-background body {
+  border: 1px solid rgba(57, 57, 57, 0.35);
 }
 
-.dark-color {
+.white-background h2, .white-background p {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.white-background .nav-button {
+  border: 1px solid rgba(57, 57, 57, 0.85);
   color: rgba(57, 57, 57, 0.85);
 }
 
-.dark-background div {
+.white-background .nav-button .bar1, .white-background .nav-button .bar2, .white-background .nav-button .bar3 {
   background-color: rgba(57, 57, 57, 0.85);
 }
 
 @media only screen and (min-width: 768px) {
+  html {
+    padding: 60px;
+  }
   main {
     margin-top: -20px;
   }

@@ -5,7 +5,7 @@
 
 #main-menu {
 	font-family: 'Playfair Display', serif;
-	font-size: 120px;
+	font-size: 46px;
 	color: #393939;
 	display: none;
 	position: absolute;
@@ -27,7 +27,7 @@
 		
 
 			li {
-				padding: 110px;
+				padding: 30px;
 
 				a {
 					text-decoration: none;
@@ -42,18 +42,19 @@
 
 .nav-button {
 	position: absolute;
-	right: 27px;
-	top: 37px;
+  right: 7px;
+  top: 15px;
+
   cursor: pointer;
   border: 1px solid rgba(#ffffff, 0.85);
 	padding: 6px 17px 6px 17px;
 	z-index: 10;
 
 	.bar1, .bar2, .bar3 {
-		width: 70px;
-		height: 8px;
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
 		background-color: #FFFFFF;
-		margin: 12px 0;
 		transition: 0.4s;
 	}
 }
@@ -63,20 +64,20 @@
 .close {
 	.bar1 {
 		-webkit-transform: rotate(-45deg) translate(-13px, 15px);
-		transform: rotate(-45deg) translate(-13px, 15px);
+		transform: rotate(-45deg) translate(-7px, 7px);
 	}
 	.bar2 {
 		opacity: 0;
 	}
 	.bar3 {
 		-webkit-transform: rotate(45deg) translate(-13px, -15px);
-		transform: rotate(45deg) translate(-13px, -15px);
+		transform: rotate(45deg) translate(-7px, -7px);
 	}
 }
 
 /* ---------- */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
 	#main-menu {
 		font-size: 70px;
 

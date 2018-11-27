@@ -9,8 +9,5 @@ function navButtonAction (btn) {
 	btn.classList.toggle("close");
 
 	html.classList.toggle("white-background");
-	body.classList.toggle("dark-border");
 	menu.classList.toggle("menu-show");
-	navbutton.classList.toggle("dark-border");
-	navbutton.classList.toggle("dark-background")
 }
