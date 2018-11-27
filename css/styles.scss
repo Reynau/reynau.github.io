@@ -32,10 +32,15 @@ main {
 
 	h2 {
 		font-size: 28px;
+		align-self: flex-end;
+		text-align: center;
+		margin: 0;
 	}
 
 	p {
 		font-size: 18px;
+		align-self: center;
+		text-align: center;
 	}
 }
 
@@ -75,5 +80,13 @@ main {
 
 	main {
 		margin-top: -20px;
+
+		h2 {
+			font-size: 32px;
+		}
+	
+		p {
+			font-size: 20px;
+		}
 	}
 }

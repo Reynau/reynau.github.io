@@ -37,10 +37,15 @@ main {
 
 main h2 {
   font-size: 28px;
+  align-self: flex-end;
+  text-align: center;
+  margin: 0;
 }
 
 main p {
   font-size: 18px;
+  align-self: center;
+  text-align: center;
 }
 
 .white-background {
@@ -80,5 +85,11 @@ main p {
   }
   main {
     margin-top: -20px;
+  }
+  main h2 {
+    font-size: 32px;
+  }
+  main p {
+    font-size: 20px;
   }
 }
