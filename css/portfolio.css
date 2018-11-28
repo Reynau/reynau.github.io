@@ -1,7 +1,9 @@
 .portfolio {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
 }
 
@@ -25,16 +27,23 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .portfolio {
+  main {
+    padding: 0 50px;
+  }
+  main .portfolio {
     font-size: 52px;
   }
-  .portfolio ul li:nth-child(1) {
+  main .portfolio ul li {
+    margin: 100px 0;
+  }
+  main .portfolio ul li:nth-child(1) {
     text-align: left;
   }
-  .portfolio ul li:nth-child(2) {
+  main .portfolio ul li:nth-child(2) {
     text-align: center;
   }
-  .portfolio ul li:nth-child(3) {
+  main .portfolio ul li:nth-child(3) {
     text-align: right;
   }
 }
+/*# sourceMappingURL=portfolio.css.map */

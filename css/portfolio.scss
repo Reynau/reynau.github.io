@@ -27,27 +27,35 @@
     .portfolio {
         a {
             color: rgba(#ffffff, 0.45)
-        }
+        } 
     }
 }
-
+ 
 
 @media only screen and (min-width: 768px) {
-    .portfolio {   
-        font-size: 52px;
+    main {
+        padding: 0 50px;
 
-        ul {
-            li:nth-child(1) {
-                text-align: left;
-            }
+        .portfolio {   
+            font-size: 52px;
     
-            li:nth-child(2) {
-                text-align: center;
-            }
-    
-            li:nth-child(3) {
-                text-align: right;
+            ul {
+                li {
+                    margin: 100px 0;
+                }
+                li:nth-child(1) {
+                    text-align: left;
+                }
+        
+                li:nth-child(2) {
+                    text-align: center;
+                }
+        
+                li:nth-child(3) {
+                    text-align: right;
+                }
             }
         }
     }
+    
 }

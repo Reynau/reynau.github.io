@@ -1,5 +1,6 @@
 /* Menu */
 .menu-show {
+  display: -ms-grid !important;
   display: grid !important;
 }
 
@@ -13,13 +14,16 @@
   top: 0;
   height: 100%;
   width: 100%;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   z-index: 9;
 }
 
 #main-menu div {
   text-align: center;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #main-menu div ul {
@@ -53,6 +57,7 @@
   height: 4px;
   margin: 6px 0;
   background-color: #FFFFFF;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -102,3 +107,4 @@
 }
 
 /* ---------- */
+/*# sourceMappingURL=menu.css.map */
