@@ -23,21 +23,28 @@ main {
 
         .title {
             position: relative;
+            display: inline-block;
 
             h3 {
                 text-transform: uppercase;
                 font-size: 28px;
+                margin: 0;
             }
     
             div {
                 z-index: -1;
-                position: absolute;
-                width: 170px;
-                height: 30px;
-                background-color: rgba(#ffffff, 0.85);
+                background-color: rgba(255,255,255,0.85);
 
-                bottom: -8px;
-                left: 32px;
+                position: absolute;
+
+                // Size relative to title
+                width: 100%;
+                height: 65%;
+                
+                // Position relative to title
+                bottom: -10%;
+                left: 5%;
+                right: 0;          
             }
         }
 
@@ -51,18 +58,17 @@ main {
                 height: 115%;
                 background-color: rgba(#ffffff, 0.85);
 
-                bottom: -38px;
-                left: 2.5%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
             }
         }
-        
         
         img {
             position: relative;
             z-index: -2;
-            margin-top: -30px;
+            margin-top: -15px;
             margin-bottom: -50px; 
-            width: 600px;
         }
 
         h3, p {
@@ -83,7 +89,41 @@ main {
     }
 } 
 
-@media only screen and (max-width: 320px) {
+
+@media only screen and (min-width: 768px) {
+    .glider {
+        figure {
+            div {
+                text-align: left;
+            }
+
+            .title {
+
+                h3 {
+                    font-size: 42px;
+                }
+            }
+
+            img {
+                width: 450px;
+                margin-bottom: -115px; 
+            }
+
+            .text {
+                display: inline-block;
+
+                div {
+                    height: 90%;
+                    left: 0;
+                    right: initial;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 320px) { // iPhone 5/SE
 
     html {
         padding: 20px;
@@ -97,5 +137,6 @@ main {
 		p {
 			font-size: 16px;
 		}
-	}
+    }
+    
 }

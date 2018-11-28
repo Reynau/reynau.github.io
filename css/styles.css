@@ -3,15 +3,16 @@
 html, body {
   height: 100%;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   padding: 40px;
   background: #1a162a;
   /* Old browsers */
+  background: -moz-linear-gradient(45deg, #1a162a 0%, #1d006c 100%);
   /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #1a162a 0%, #1d006c 100%);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(45deg, #1a162a 0%, #1d006c 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -23,47 +24,41 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 main {
   margin-top: -17px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: min-content auto;
-      grid-template-rows: -webkit-min-content auto;
-      grid-template-rows: min-content auto;
+  grid-template-rows: min-content auto;
   height: 100%;
   padding: 0 15px;
 }
 
 main h2 {
   font-size: 28px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   text-align: center;
   margin: 0;
 }
 
 main p {
   font-size: 18px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   text-align: center;
 }
 
 .white-background {
   background: #dedaec;
   /* Old browsers */
+  background: -moz-linear-gradient(45deg, #d2caf1 0%, #f1d7d7 100%);
   /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #d2caf1 0%, #f1d7d7 100%);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(45deg, #d2caf1 0%, #f1d7d7 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2caf1', endColorstr='#f1d7d7', GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  -webkit-transition: background 4000ms linear;
   transition: background 4000ms linear;
 }
 
@@ -94,8 +89,4 @@ main p {
   main h2 {
     font-size: 32px;
   }
-  main p {
-    font-size: 20px;
-  }
 }
-/*# sourceMappingURL=styles.css.map */

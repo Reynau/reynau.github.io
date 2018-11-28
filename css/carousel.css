@@ -23,21 +23,24 @@ main {
 
 .glider figure .title {
   position: relative;
+  display: inline-block;
 }
 
 .glider figure .title h3 {
   text-transform: uppercase;
   font-size: 28px;
+  margin: 0;
 }
 
 .glider figure .title div {
   z-index: -1;
-  position: absolute;
-  width: 170px;
-  height: 30px;
   background-color: rgba(255, 255, 255, 0.85);
-  bottom: -8px;
-  left: 32px;
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  bottom: -10%;
+  left: 5%;
+  right: 0;
 }
 
 .glider figure .text {
@@ -50,16 +53,16 @@ main {
   width: 95%;
   height: 115%;
   background-color: rgba(255, 255, 255, 0.85);
-  bottom: -38px;
-  left: 2.5%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .glider figure img {
   position: relative;
   z-index: -2;
-  margin-top: -30px;
+  margin-top: -15px;
   margin-bottom: -50px;
-  width: 600px;
 }
 
 .glider figure h3, .glider figure p {
@@ -78,6 +81,27 @@ main {
   background-color: rgba(57, 57, 57, 0.45);
 }
 
+@media only screen and (min-width: 768px) {
+  .glider figure div {
+    text-align: left;
+  }
+  .glider figure .title h3 {
+    font-size: 42px;
+  }
+  .glider figure img {
+    width: 450px;
+    margin-bottom: -115px;
+  }
+  .glider figure .text {
+    display: inline-block;
+  }
+  .glider figure .text div {
+    height: 90%;
+    left: 0;
+    right: initial;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   html {
     padding: 20px;
@@ -89,4 +113,3 @@ main {
     font-size: 16px;
   }
 }
-/*# sourceMappingURL=carousel.css.map */
