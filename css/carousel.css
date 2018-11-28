@@ -14,7 +14,12 @@ main {
   right: -50px;
 }
 
+.glider {
+  height: 100%;
+}
+
 .glider figure {
+  position: relative;
   margin: 0;
   font-family: 'Playfair Display', serif;
   background-color: transparent;
@@ -22,17 +27,21 @@ main {
 }
 
 .glider figure .title {
-  position: relative;
-  display: inline-block;
+  text-align: left;
 }
 
-.glider figure .title h3 {
+.glider figure .title .title-container {
+  display: inline-block;
+  position: relative;
+}
+
+.glider figure .title .title-container h3 {
   text-transform: uppercase;
   font-size: 28px;
   margin: 0;
 }
 
-.glider figure .title div {
+.glider figure .title .title-container div {
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.85);
   position: absolute;
@@ -40,36 +49,29 @@ main {
   height: 65%;
   bottom: -10%;
   left: 5%;
-  right: 0;
 }
 
-.glider figure .text {
+.glider figure .text .text-container {
   position: relative;
 }
 
-.glider figure .text div {
+.glider figure .text .text-container div {
   z-index: -1;
   position: absolute;
-  width: 95%;
-  height: 115%;
+  width: 100%;
+  height: 105%;
   background-color: rgba(255, 255, 255, 0.85);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
 }
 
-.glider figure img {
-  position: relative;
-  z-index: -2;
-  margin-top: -15px;
-  margin-bottom: -50px;
+.glider figure .text .text-container p {
+  text-align: center;
 }
 
-.glider figure h3, .glider figure p {
-  color: rgba(57, 57, 57, 0.85);
+.glider figure .button {
+  margin-top: 50px;
 }
 
-.glider figure button {
+.glider figure .button button {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   padding: 10px;
@@ -77,28 +79,91 @@ main {
   background-color: transparent;
 }
 
-.glider figure button:hover {
+.glider figure .button button:hover {
   background-color: rgba(57, 57, 57, 0.45);
 }
 
+.glider figure img {
+  z-index: -2;
+  width: 90%;
+  position: relative;
+  margin-bottom: -50px;
+}
+
+.glider figure h3, .glider figure p {
+  color: rgba(57, 57, 57, 0.85);
+  text-align: left;
+}
+
 @media only screen and (min-width: 768px) {
-  .glider figure div {
+  .glider {
+    height: 100%;
+  }
+  .glider figure {
+    position: relative;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: transparent;
     text-align: left;
   }
-  .glider figure .title h3 {
+  .glider figure .title .title-container {
+    display: inline-block;
+    position: relative;
+  }
+  .glider figure .title .title-container h3 {
+    text-transform: uppercase;
     font-size: 42px;
+    margin: 0;
+  }
+  .glider figure .title .title-container div {
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    bottom: -10%;
+    left: 5%;
+  }
+  .glider figure .text .text-container {
+    width: 60%;
+    position: relative;
+  }
+  .glider figure .text .text-container div {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  .glider figure .text .text-container p {
+    font-size: 20px;
+    padding: 30px;
+    text-align: left;
+  }
+  .glider figure .button {
+    margin-top: 50px;
+  }
+  .glider figure .button button {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    padding: 15px;
+    border: solid 1px rgba(57, 57, 57, 0.85);
+    background-color: transparent;
+  }
+  .glider figure .button button:hover {
+    background-color: rgba(57, 57, 57, 0.45);
   }
   .glider figure img {
-    width: 450px;
-    margin-bottom: -115px;
+    z-index: -2;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 5px;
   }
-  .glider figure .text {
-    display: inline-block;
-  }
-  .glider figure .text div {
-    height: 90%;
-    left: 0;
-    right: initial;
+  .glider figure h3, .glider figure p {
+    color: rgba(57, 57, 57, 0.85);
+    text-align: left;
   }
 }
 

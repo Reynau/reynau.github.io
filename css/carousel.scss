@@ -15,108 +15,187 @@ main {
 }
 
 .glider {
+    height: 100%;
+
     figure {
+        position: relative;
         margin: 0;
         font-family: 'Playfair Display', serif;
         background-color: transparent;
         text-align: center;
 
         .title {
-            position: relative;
-            display: inline-block;
+            text-align: left;
 
-            h3 {
-                text-transform: uppercase;
-                font-size: 28px;
-                margin: 0;
-            }
+            .title-container {
+                display: inline-block;
+                position: relative;
+
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 28px;
+                    margin: 0;
+                }    
+
+                div {
+                    z-index: -1;
+                    background-color: rgba(255,255,255,0.85);
     
-            div {
-                z-index: -1;
-                background-color: rgba(255,255,255,0.85);
-
-                position: absolute;
-
-                // Size relative to title
-                width: 100%;
-                height: 65%;
-                
-                // Position relative to title
-                bottom: -10%;
-                left: 5%;
-                right: 0;          
+                    position: absolute;
+    
+                    // Size relative to title 
+                    width: 100%;
+                    height: 65%;
+                    
+                    // Position relative to title
+                    bottom: -10%;
+                    left: 5%;
+                }
             }
         }
 
         .text {
-            position: relative;
 
-            div {
-                z-index: -1;
-                position: absolute;
-                width: 95%;
-                height: 115%;
-                background-color: rgba(#ffffff, 0.85);
+            .text-container {
+                position: relative;
 
-                left: 0;
-                right: 0;
-                margin: 0 auto;
+                div {
+                    z-index: -1;
+                    position: absolute;
+                    width: 100%;
+                    height: 105%;
+                    background-color: rgba(#ffffff, 0.85);
+                }
+                p {
+                    text-align: center;
+                }
             }
         }
-        
-        img {
-            position: relative;
-            z-index: -2;
-            margin-top: -15px;
-            margin-bottom: -50px; 
+
+        .button {
+            margin-top: 50px;
+
+            button {
+                font-family: 'Playfair Display', serif;
+                text-transform: uppercase; 
+                padding: 10px;
+                border: solid 1px rgba(57,57,57,0.85);
+                background-color: transparent;
+            }
+    
+            button:hover {
+                background-color: rgba(57,57,57,0.45);
+            }
         }
+
+        img {
+            z-index: -2;
+
+            width: 90%;
+
+            position: relative;
+            margin-bottom: -50px;
+        }
+        
 
         h3, p {
             color: rgba(57,57,57,0.85);
-        }
-
-        button {
-            font-family: 'Playfair Display', serif;
-            text-transform: uppercase; 
-            padding: 10px;
-            border: solid 1px rgba(57,57,57,0.85);
-            background-color: transparent;
-        }
-
-        button:hover {
-            background-color: rgba(57,57,57,0.45);
+            text-align: left;
         }
     }
 } 
 
-
 @media only screen and (min-width: 768px) {
     .glider {
+        height: 100%;
+    
         figure {
-            div {
-                text-align: left;
-            }
-
+            position: relative;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: transparent;
+            text-align: left;
+    
             .title {
-
-                h3 {
-                    font-size: 42px;
+                .title-container {
+                    display: inline-block;
+                    position: relative;
+    
+                    h3 {
+                        text-transform: uppercase;
+                        font-size: 42px;
+                        margin: 0;
+                    }    
+    
+                    div {
+                        z-index: -1;
+                        background-color: rgba(255,255,255,0.85);
+        
+                        position: absolute;
+        
+                        // Size relative to title 
+                        width: 100%;
+                        height: 65%;
+                        
+                        // Position relative to title
+                        bottom: -10%;
+                        left: 5%;
+                    }
                 }
             }
-
-            img {
-                width: 450px;
-                margin-bottom: -115px; 
-            }
-
+    
             .text {
-                display: inline-block;
+    
+                .text-container {
+                    width: 60%;
+                    position: relative;
+    
+                    div {
+                        z-index: -1;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(#ffffff, 0.85);
+                    }
 
-                div {
-                    height: 90%;
-                    left: 0;
-                    right: initial;
+                    p {
+                        font-size: 20px;
+                        padding: 30px;
+                        text-align: left;
+                    }
                 }
+            }
+    
+            .button {
+                margin-top: 50px;
+    
+                button {
+                    font-size: 20px;
+                    font-family: 'Playfair Display', serif;
+                    text-transform: uppercase; 
+                    padding: 15px;
+                    border: solid 1px rgba(57,57,57,0.85);
+                    background-color: transparent;
+                }
+        
+                button:hover {
+                    background-color: rgba(57,57,57,0.45);
+                }
+            }
+    
+            img {
+                z-index: -2;
+    
+                width: 60%;
+    
+                position: absolute;
+                top: 0;
+                right: 5px;
+            }
+    
+            h3, p {
+                color: rgba(57,57,57,0.85);
+                text-align: left;
             }
         }
     }
