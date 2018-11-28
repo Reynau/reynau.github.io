@@ -32,6 +32,8 @@
   }
   main .portfolio {
     font-size: 52px;
+    min-width: 800px;
+    margin: 0 auto;
   }
   main .portfolio ul li:nth-child(1) {
     text-align: left;
