@@ -1,7 +1,9 @@
 .portfolio {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
 }
 
@@ -41,3 +43,4 @@
     text-align: right;
   }
 }
+/*# sourceMappingURL=portfolio.css.map */

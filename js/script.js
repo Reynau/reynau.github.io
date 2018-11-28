@@ -10,4 +10,6 @@ function navButtonAction (btn) {
 
 	html.classList.toggle("white-background");
 	menu.classList.toggle("menu-show");
+
+	switchBackground()
 }

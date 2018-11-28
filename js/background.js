@@ -14,17 +14,19 @@
         y: -500,
     }
 
+    intervalId = undefined
+
     window.onload = function () {
-    canvas = document.getElementById("gc")
-    ctx = canvas.getContext("2d")
+        canvas = document.getElementById("gc")
+        ctx = canvas.getContext("2d")
 
-    window.addEventListener('resize', updateCanvasSize)
-    window.addEventListener('mousemove', updateMouse)
-    updateCanvasSize()
+        window.addEventListener('resize', updateCanvasSize)
+        window.addEventListener('mousemove', updateMouse)
+        updateCanvasSize()
 
-    init()
-    setInterval(loop, 1000/30);
-}
+        init()
+        intervalId = setInterval(loop, 1000/30);
+    }
     
     function updateMouse (event) {
         mouse.x = event.clientX
@@ -32,9 +34,19 @@
     }
 
     function updateCanvasSize () {
-        canvas.width = document.body.clientWidth
-        canvas.height = document.body.clientHeight
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
 
+
+        if (canvas.width < 768) {
+            clearInterval(intervalId)
+            canvas.width = 0
+            canvas.height = 0
+            window.removeEventListener('resize', updateCanvasSize)
+            window.removeEventListener('mousemove', updateMouse)
+            console.log('Small device detected - Animation removed to increase performance')
+            return
+        }
         // Reset the animation
         init()
     }
@@ -115,10 +127,10 @@
             bgColorEnd = '#1a162a'
         }
         else {
-            bgColorInit = '#d2caf1'
-            bgColorEnd = '#f1d7d7'
+            bgColorInit = '#f1d7d7'
+            bgColorEnd = '#d2caf1'
         }
-        let grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
+        let grad = ctx.createLinearGradient(canvas.width, 0, 0, canvas.height)
         grad.addColorStop(0, bgColorInit)
         grad.addColorStop(1, bgColorEnd)
         ctx.fillStyle = grad
@@ -132,4 +144,8 @@
     function outsideCanvas (particle) {
         return particle.x < 0 || particle.y < 0 || 
             particle.x > canvas.width || particle.y > canvas.height
+    }
+
+    function switchBackground () {
+        darkBackground = !darkBackground
     }
