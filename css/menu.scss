@@ -1,20 +1,24 @@
 /* Menu */
 .menu-show {
-	display: grid !important;
+	opacity: 1 !important;
+	transition: opacity 1s !important;
+	z-index: 9 !important;
 }
 
 #main-menu {
 	font-family: 'Playfair Display', serif;
 	font-size: 46px;
-	color: #393939;
-	display: none;
+	color: rgba(#393939, 0.85);
+	display: grid;
 	position: absolute;
 	left: 0;
 	top: 0;
 	height: 100%;
 	width: 100%;
 	transition: 0.4s;
-	z-index: 9;
+	z-index: -20;
+	opacity: 0;
+	//transition: opacity 0s;
 
 	div  {
 		text-align: center;

@@ -1,29 +1,28 @@
 /* Menu */
 .menu-show {
-  display: -ms-grid !important;
-  display: grid !important;
+  opacity: 1 !important;
+  transition: opacity 1s !important;
+  z-index: 9 !important;
 }
 
 #main-menu {
   font-family: 'Playfair Display', serif;
   font-size: 46px;
-  color: #393939;
-  display: none;
+  color: rgba(57, 57, 57, 0.85);
+  display: grid;
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
-  z-index: 9;
+  z-index: -20;
+  opacity: 0;
 }
 
 #main-menu div {
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 #main-menu div ul {
@@ -57,7 +56,6 @@
   height: 4px;
   margin: 6px 0;
   background-color: #FFFFFF;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -107,4 +105,3 @@
 }
 
 /* ---------- */
-/*# sourceMappingURL=menu.css.map */
