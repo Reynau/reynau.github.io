@@ -1,151 +1,180 @@
 
-    darkBackground = true
+window.requestAnimationFrame =  window.requestAnimationFrame || 
+                                window.webkitRequestAnimationFrame || 
+                                window.mozRequestAnimationFrame || 
+                                window.msRequestAnimationFrame || 
+                                ( function(f) { window.setTimeout(f, 0) } )
 
-    maxParticles = 2000
-    maxSpeed = 0.5
-    minRad = 0.2
-    maxRad = 0.8
-    minAlpha = 0.2
-    maxAlpha = 0.4
-    particles = []
-    mouseForce = 25
-    mouse = {
-        x: -500,
-        y: -500,
+
+darkBackground = true
+
+NPARTICLES = 2000
+maxSpeed = 0.5
+minRad = 0.2
+maxRad = 0.8
+minAlpha = 0.2
+maxAlpha = 0.4
+particles = []
+mouseForce = 25
+mouse = {
+    x: -500,
+    y: -500,
+}
+
+intervalId = undefined
+
+
+timestep = 1000 / 40
+lastFrame = Date.now()
+delta = 0
+
+renderInQueue = false
+
+window.onload = function () {
+    canvas = document.getElementById("gc")
+    ctx = canvas.getContext("2d")
+
+    window.addEventListener('resize', updateCanvasSize)
+    window.addEventListener('mousemove', updateMouse)
+    updateCanvasSize()
+
+    init()
+    intervalId = setInterval(loop, 1000/30);
+}
+
+function updateMouse (event) {
+    mouse.x = event.clientX
+    mouse.y = event.clientY
+}
+
+function updateCanvasSize () {
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+
+    if (canvas.width < 768) {
+        clearInterval(intervalId)
+        canvas.width = 0
+        canvas.height = 0
+        window.removeEventListener('resize', updateCanvasSize)
+        window.removeEventListener('mousemove', updateMouse)
+        console.log('Small device detected - Animation removed to increase performance')
+        return
     }
+    // Reset the animation
+    init()
+}
 
-    intervalId = undefined
+function init () {
+    particles = []
+    for (let i = 0; i < NPARTICLES; ++i) {
+        particles.push(newParticle())
+    }
+}
 
-    window.onload = function () {
-        canvas = document.getElementById("gc")
-        ctx = canvas.getContext("2d")
+function newParticle () {
+    let x = rand(0, canvas.width)
+    let y = rand(0, canvas.height)
 
-        window.addEventListener('resize', updateCanvasSize)
-        window.addEventListener('mousemove', updateMouse)
-        updateCanvasSize()
+    return {
+        x: rand(0, canvas.width),
+        y: rand(0, canvas.height),
+        r: rand(minRad, maxRad),
+        vx: rand(-maxSpeed, maxSpeed),
+        vy: rand(-maxSpeed, maxSpeed),
+        a: rand(minAlpha, maxAlpha),
+        update: function (mouse) {
+            let dist = Math.hypot(mouse.x - this.x, mouse.y - this.y)
 
-        init()
-        intervalId = setInterval(loop, 1000/30);
+            if (dist < mouseForce) {
+                let xDist = mouse.x - this.x
+                let yDist = mouse.y - this.y
+
+                let xSpeed = xDist * maxSpeed / mouseForce
+                let ySpeed = yDist * maxSpeed / mouseForce
+
+                this.x += xSpeed
+                this.y += ySpeed
+            }
+            else {
+                this.x += this.vx
+                this.y += this.vy
+            }
+        },
+        draw: function () {
+            if (darkBackground) {
+                fillColor = "rgba(255, 255, 255, " + this.a + ")"
+            }
+            else {
+                fillColor = "rgba(0, 0, 0, " + (this.a + this.a) + ")"
+            }
+            ctx.beginPath()
+            ctx.arc(this.x, this.y, this.r, 0, 2*Math.PI, false)
+            ctx.fillStyle = fillColor
+            ctx.fill()
+        },
+    }
+}
+
+function update () {
+    particles.forEach((particle, i) => {
+        particle.update(mouse)
+        if (outsideCanvas(particle)) {
+            particles[i] = newParticle()
+        }
+    })
+}
+
+function draw () {
+    drawBackground()
+    particles.forEach(particle => particle.draw())
+    renderInQueue = false
+}   
+
+function loop () {
+    updateDelta()
+    while (delta >= timestep) {
+        update()
+        delta -= timestep
     }
     
-    function updateMouse (event) {
-        mouse.x = event.clientX
-        mouse.y = event.clientY
+    if (!renderInQueue) {
+        renderInQueue = true
+        window.requestAnimationFrame(draw)
     }
+}
 
-    function updateCanvasSize () {
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
+function updateDelta () {
+    let timestamp = Date.now()
+    delta = timestamp - lastFrame
+    lastFrame = timestamp
+}
 
-
-        if (canvas.width < 768) {
-            clearInterval(intervalId)
-            canvas.width = 0
-            canvas.height = 0
-            window.removeEventListener('resize', updateCanvasSize)
-            window.removeEventListener('mousemove', updateMouse)
-            console.log('Small device detected - Animation removed to increase performance')
-            return
-        }
-        // Reset the animation
-        init()
+function drawBackground () {
+    if (darkBackground) {   
+        bgColorInit = '#010114'
+        bgColorEnd = '#1a162a'
     }
-
-    function init () {
-        particles = []
-        for (let i = 0; i < maxParticles; ++i) {
-            particles.push(newParticle())
-        }
+    else {
+        bgColorInit = '#f1d7d7'
+        bgColorEnd = '#d2caf1'
     }
+    let grad = ctx.createLinearGradient(canvas.width, 0, 0, canvas.height)
+    grad.addColorStop(0, bgColorInit)
+    grad.addColorStop(1, bgColorEnd)
+    ctx.fillStyle = grad
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+}
 
-    function newParticle () {
-        let x = rand(0, canvas.width)
-        let y = rand(0, canvas.height)
+function rand(min, max) {
+    return Math.random() * (max -min) + min
+}
 
-        return {
-            x: rand(0, canvas.width),
-            y: rand(0, canvas.height),
-            r: rand(minRad, maxRad),
-            vx: rand(-maxSpeed, maxSpeed),
-            vy: rand(-maxSpeed, maxSpeed),
-            a: rand(minAlpha, maxAlpha),
-            update: function (mouse) {
-                let dist = Math.hypot(mouse.x - this.x, mouse.y - this.y)
+function outsideCanvas (particle) {
+    return particle.x < 0 || particle.y < 0 || 
+        particle.x > canvas.width || particle.y > canvas.height
+}
 
-                if (dist < mouseForce) {
-                    let xDist = mouse.x - this.x
-                    let yDist = mouse.y - this.y
-
-                    let xSpeed = xDist * maxSpeed / mouseForce
-                    let ySpeed = yDist * maxSpeed / mouseForce
-
-                    this.x += xSpeed
-                    this.y += ySpeed
-                }
-                else {
-                    this.x += this.vx
-                    this.y += this.vy
-                }
-            },
-            draw: function () {
-                if (darkBackground) {
-                    fillColor = "rgba(255, 255, 255, " + this.a + ")"
-                }
-                else {
-                    fillColor = "rgba(0, 0, 0, " + (this.a + this.a) + ")"
-                }
-                ctx.beginPath()
-                ctx.arc(this.x, this.y, this.r, 0, 2*Math.PI, false)
-                ctx.fillStyle = fillColor
-                ctx.fill()
-            },
-        }
-    }
-
-    function update () {
-        particles.forEach((particle, i) => {
-            particle.update(mouse)
-            if (outsideCanvas(particle)) {
-                particles[i] = newParticle()
-            }
-        })
-    }
-
-    function draw () {
-        drawBackground()
-        particles.forEach(particle => particle.draw())
-    }   
-
-    function loop () {
-        update()
-        draw()
-    }
-
-    function drawBackground () {
-        if (darkBackground) {   
-            bgColorInit = '#010114'
-            bgColorEnd = '#1a162a'
-        }
-        else {
-            bgColorInit = '#f1d7d7'
-            bgColorEnd = '#d2caf1'
-        }
-        let grad = ctx.createLinearGradient(canvas.width, 0, 0, canvas.height)
-        grad.addColorStop(0, bgColorInit)
-        grad.addColorStop(1, bgColorEnd)
-        ctx.fillStyle = grad
-        ctx.fillRect(0, 0, canvas.width, canvas.height)
-    }
-
-    function rand(min, max) {
-        return Math.random() * (max -min) + min
-    }
-
-    function outsideCanvas (particle) {
-        return particle.x < 0 || particle.y < 0 || 
-            particle.x > canvas.width || particle.y > canvas.height
-    }
-
-    function switchBackground () {
-        darkBackground = !darkBackground
-    }
+function switchBackground () {
+    darkBackground = !darkBackground
+}
