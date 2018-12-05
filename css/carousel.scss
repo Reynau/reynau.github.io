@@ -1,18 +1,22 @@
+html { 
+    padding: 20px; 
+}
+
 figure {
     font-family: 'Playfair Display', serif;
     margin: 0;
 
     display: grid;
     grid-template-rows: 10% auto auto 10%;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-areas: 
         "title"
         "image"
-        "description"
+        "text"
         "button";
 
     .title {
-        grid-area: "title";
+        grid-area: title;
         align-self: center;
 
         .title-container {
@@ -44,14 +48,14 @@ figure {
     }
 
     img {
-        grid-area: "image";
+        grid-area: image;
         align-self: center;
 
         width: 100%;
     }
 
     .text {
-        grid-area: "text";
+        grid-area: text;
         align-self: center;
 
         .text-container {
@@ -66,7 +70,7 @@ figure {
     }
 
     .button {
-        grid-area: "button";
+        grid-area: button;
         align-self: center;
         
         text-align: center;
@@ -85,96 +89,8 @@ figure {
     }
 }
 
-/*
-figure {
-    position: relative;
-    background-color: transparent;
-    text-align: center;
-
-    .title {
-        text-align: left;
-
-        .title-container {
-            display: inline-block;
-            position: relative;
-
-            h3 {
-                text-transform: uppercase;
-                font-size: 28px;
-                margin: 0;
-            }    
-
-            div {
-                z-index: -1;
-                background-color: rgba(255,255,255,0.85);
-
-                position: absolute;
-
-                // Size relative to title 
-                width: 100%;
-                height: 65%;
-                
-                // Position relative to title
-                bottom: -10%;
-                left: 5%;
-            }
-        }
-    }
-
-    .text {
-
-        .text-container {
-            position: relative;
-
-            div {
-                z-index: -1;
-                position: absolute;
-                width: 100%;
-                height: 105%;
-                background-color: rgba(#ffffff, 0.85);
-            }
-            p {
-                text-align: center;
-            }
-        }
-    }
-
-    .button {
-        margin-top: 50px;
-
-        button {
-            font-family: 'Playfair Display', serif;
-            text-transform: uppercase; 
-            padding: 10px;
-            border: solid 1px rgba(57,57,57,0.85);
-            background-color: transparent;
-        }
-
-        button:hover {
-            background-color: rgba(57,57,57,0.45);
-        }
-    }
-
-    img {
-        z-index: -2;
-
-        width: 90%;
-
-        position: relative;
-        margin-bottom: -50px;
-    }
-    
-
-    h3, p {
-        color: rgba(57,57,57,0.85);
-        text-align: left;
-    }
-}
-*/
-
 /* iphone 5 */
 @media only screen and (min-width: 320px) and (max-height: 568px) and (-webkit-device-pixel-ratio: 2) {
-    html { padding: 20px; }
 
 	figure .title .title-container  h3 { font-size: 24px; }
 	figure .text .text-container p { font-size: 14px; }
@@ -182,7 +98,6 @@ figure {
 
 /* iphone 6, 6s, 7, 8 */
 @media only screen and (min-width: 375px) and (max-height: 668px) and (-webkit-device-pixel-ratio: 2) {
-    html { padding: 20px; }
  
 	figure .title .title-container  h3 { font-size: 26px; }
 	figure .text .text-container p { font-size: 16px; }
@@ -190,8 +105,59 @@ figure {
 
 /* iphone X */
 @media only screen and (min-width: 375px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    html { padding: 20px; }
  
 	figure .title .title-container  h3 { font-size: 28px; }
 	figure .text .text-container p { font-size: 20px; }
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        padding: 40px;
+    }
+    
+    figure {
+        display: grid;
+        grid-template-rows: 2fr repeat(4, minmax(2fr, 10%)) 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        
+        .title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+
+            align-self: center;
+            justify-self: center;
+
+            .title-container h3 {
+                font-size: 42px;
+            }
+        }
+
+        img {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 5;
+
+            justify-self: center;
+
+            z-index: -2;
+            max-width: 40vw;
+        }
+
+        .text {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+
+        .button {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+    }
 }
