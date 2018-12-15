@@ -116,10 +116,8 @@ main {
 
 #projects {
 	.project {
-		button {
-			font-family: 'Montserrat', sans-serif;
-			font-size: inherit;
-	
+		a {
+			display: inline-block;
 			background-color: transparent;
 			border: solid 1px #353535;
 			color: #353535;
@@ -130,7 +128,7 @@ main {
 			transition: 0.4s;
 		}
 	
-		button:hover {
+		a:hover {
 			background-color: #353535;
 			border: solid 1px #353535;
 			color: #f7f6f5;
@@ -150,19 +148,20 @@ main {
 	ul {
 		display: grid;
 		grid-template-rows: 1fr;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-areas: ". el1 el2 .";
+		grid-template-columns: repeat(2, 1fr);
 
 		li {
 			align-self: center;
 			justify-self: center;
 			
-			font-size: 32px;
 			padding: 0 10px;
+
+			i {
+				font-size: 32px;
+			}
 		}
 
-		li:nth-child(1) { grid-area: el1; }
-		li:nth-child(2) { grid-area: el2; }
+
 	}
 }
 
@@ -239,6 +238,8 @@ main {
 			display: grid;
 			grid-template-rows: 1fr;
 			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+
 		}
 	}
 
@@ -249,8 +250,17 @@ main {
 			transition: 0.4s;
 		}
 
-		ul li:hover i {
-			color: #367047;
+		ul {
+
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: ". el1 el2 .";
+
+			li:nth-child(1) { grid-area: el1; }
+			li:nth-child(2) { grid-area: el2; }
+
+			li:hover i {
+				color: #367047;
+			}
 		}
 	}
 }

@@ -108,9 +108,8 @@ main section {
   color: #367047;
 }
 
-#projects .project button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: inherit;
+#projects .project a {
+  display: inline-block;
   background-color: transparent;
   border: solid 1px #353535;
   color: #353535;
@@ -119,7 +118,7 @@ main section {
   transition: 0.4s;
 }
 
-#projects .project button:hover {
+#projects .project a:hover {
   background-color: #353535;
   border: solid 1px #353535;
   color: #f7f6f5;
@@ -138,23 +137,17 @@ main section {
 #contact ul {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: ". el1 el2 .";
+  grid-template-columns: repeat(2, 1fr);
 }
 
 #contact ul li {
   align-self: center;
   justify-self: center;
-  font-size: 32px;
   padding: 0 10px;
 }
 
-#contact ul li:nth-child(1) {
-  grid-area: el1;
-}
-
-#contact ul li:nth-child(2) {
-  grid-area: el2;
+#contact ul li i {
+  font-size: 32px;
 }
 
 @media (min-width: 768px) {
@@ -225,12 +218,23 @@ main section {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
   }
   #contact {
     display: grid;
   }
   #contact i {
     transition: 0.4s;
+  }
+  #contact ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". el1 el2 .";
+  }
+  #contact ul li:nth-child(1) {
+    grid-area: el1;
+  }
+  #contact ul li:nth-child(2) {
+    grid-area: el2;
   }
   #contact ul li:hover i {
     color: #367047;
