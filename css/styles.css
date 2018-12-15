@@ -109,6 +109,11 @@ main section {
 }
 
 #projects .project a {
+  font-weight: bold;
+  color: #367047;
+}
+
+#projects .project a.button {
   display: inline-block;
   background-color: transparent;
   border: solid 1px #353535;
@@ -118,7 +123,7 @@ main section {
   transition: 0.4s;
 }
 
-#projects .project a:hover {
+#projects .project a.button:hover {
   background-color: #353535;
   border: solid 1px #353535;
   color: #f7f6f5;
@@ -151,9 +156,6 @@ main section {
 }
 
 @media (min-width: 768px) {
-  main section {
-    padding-bottom: 20px;
-  }
   nav {
     grid-template-areas: "title menu";
     width: 100%;
@@ -184,8 +186,8 @@ main section {
     justify-self: center;
     box-sizing: border-box;
   }
-  main .project button {
-    margin-bottom: 0;
+  main section {
+    padding-bottom: 20px;
   }
   #about {
     display: grid;
@@ -219,6 +221,9 @@ main section {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+  }
+  #projects #project-container .project button {
+    margin-bottom: 0;
   }
   #contact {
     display: grid;

@@ -116,7 +116,13 @@ main {
 
 #projects {
 	.project {
+
 		a {
+			font-weight: bold;
+			color: #367047;
+		}
+
+		a.button {
 			display: inline-block;
 			background-color: transparent;
 			border: solid 1px #353535;
@@ -128,7 +134,7 @@ main {
 			transition: 0.4s;
 		}
 	
-		a:hover {
+		a.button:hover {
 			background-color: #353535;
 			border: solid 1px #353535;
 			color: #f7f6f5;
@@ -167,7 +173,6 @@ main {
 
 
 @media (min-width: 768px) {
-	main section { padding-bottom: 20px; }
 	nav {
 		grid-template-areas: "title menu";
 		width: 100%;
@@ -205,9 +210,7 @@ main {
 		justify-self: center;
 		box-sizing: border-box;
 
-		.project button {	
-			margin-bottom: 0;
-		}
+		section { padding-bottom: 20px; }	
 	}
 
 	#about {
@@ -240,6 +243,9 @@ main {
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 20px;
 
+			.project button {	
+				margin-bottom: 0;
+			}
 		}
 	}
 
