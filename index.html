@@ -31,30 +31,37 @@
 		<section id="about">
 			<h2>About me</h2>
 			<div id="photo"><img src="images/foto.jpg"></img></div>
-			<div id="bio"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit ex justo, interdum mollis augue malesuada non. Nunc sapien justo, dapibus non ligula quis, bibendum interdum nisi.</p>
+			<div id="bio">
+				<p id="intro">Hello! My name is Xavi. I'm a Full-Stack Developer living in Barcelona, Spain.</p>
+				<p>I am currently finishing my degree in Computer Science at Universitat Politècnica de Catalunya and working at Barcelona Supercomputing Center (<a href="https://www.bsc.es/">BSC</a>) as a Research Intern.</p>
+				<p>In my free time I like to work on side projects involving some kind of art on the browser, like procedural animations (here is my <a href="https://github.com/Reynau/Animations">Animations</a> GitHub repository) or videogames (<a href="https://github.com/Reynau/BugWar">BugWar</a> for example). 
+					I am also very interested in design, web-development and web-automation (for example, using <a href="https://www.seleniumhq.org/">Selenium</a> and <a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a></a>).</p>
 			</div>		
 		</section>
 		<section id="projects">
 			<h2>Projects</h2>
 			<div id="project-container">
 				<div class="project">
-						<h3>Project title</h3>
-						<img src=""></img>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit ex justo, interdum mollis augue malesuada non.</p>	
-						<button>View on GitHub</button>
-					</div>
-					<div class="project">
-						<h3>Project title</h3>
-						<img src=""></img>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit ex justo, interdum mollis augue malesuada non.</p>	
-						<button>View on GitHub</button>
-					</div>
-					<div class="project">
-						<h3>Project title</h3>
-						<img src=""></img>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit ex justo, interdum mollis augue malesuada non.</p>	
-						<button>View on GitHub</button>
-					</div>
+					<h3>Project title</h3>
+					<img src=""></img>
+					<p class="details">Lorem ipsum dolor sit amet</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit ex justo, interdum mollis augue malesuada non.</p>	
+					<button>View on GitHub</button>
+				</div>
+				<div class="project">
+					<h3>Project title</h3>
+					<img src=""></img>
+					<p class="details">Lorem ipsum dolor sit amet</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit ex justo, interdum mollis augue malesuada non.</p>	
+					<button>View on GitHub</button>
+				</div>
+				<div class="project">
+					<h3>Project title</h3>
+					<img src=""></img>
+					<p class="details">Lorem ipsum dolor sit amet</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit ex justo, interdum mollis augue malesuada non.</p>	
+					<button>View on GitHub</button>
+				</div>
 			</div>
 			
 		</section>
@@ -62,12 +69,18 @@
 				<h2>Contact</h2>
 				<ul>
 					<li><a href=""><i class="far fa-envelope"></i></a></li>
-					<li><a href=""><i class="fab fa-instagram"></i></a></li>
 					<li><a href=""><i class="fab fa-linkedin"></i></a></li>
 				</ul>
 		</section>
 	</main>
 
-	<script src="js/index.js"></script>
+	<script>
+		var menu = document.getElementById("menu");
+
+		function switchMenu (btn) {
+			btn.classList.toggle("close");
+			menu.classList.toggle("visible");
+		}
+	</script>
 </body>
 </html>

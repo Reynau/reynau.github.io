@@ -7,6 +7,8 @@ html, body {
 
 body {
 	display: grid;
+	background-color: #f7f6f5;
+	color: #353535;
 }
 
 ul {
@@ -17,7 +19,7 @@ ul {
 }
 
 img { width: 100%; }
-a { color: black; text-decoration: none; }
+a { color: #353535; text-decoration: none; }
 
 nav {
 	align-self: center;
@@ -48,7 +50,7 @@ nav {
 			width: 30px;
 			height: 4px;
 			margin: 6px 0;
-			background-color: #000000;
+			background-color: #353535;
 			transition: 0.4s;
 		}
 	}
@@ -68,7 +70,7 @@ nav {
 	}
 
 	#menu {
-		background-color: #f1f1f1;
+		background-color: rgba(#ffffff, 0.45);
 		width: 100%;
 		padding: 0 15px;
 		grid-area: menu;
@@ -88,45 +90,68 @@ nav {
 }
 
 main {
-	padding: 0 15px;
 	display: grid;
 	grid-auto-rows: auto;
 
 	section {
+		box-sizing: border-box;
+		padding: 0 15px;
 		width: 100%;
 	}
 }
 
-.project {
-	button {
-		font-family: 'Montserrat', sans-serif;
-		font-size: inherit;
-
-		background-color: white;
-		border: solid 1px black;
-		color: black;
-		padding: 10px;
-
-		margin-bottom: 15px;
-
-		transition: 0.4s;
+#about {
+	#intro {
+		font-weight: bold;
+		font-size: 18px;
 	}
 
-	button:hover {
-		background-color: black;
-		border: solid 1px black;
-		color: white;
-		cursor: pointer;
+	#bio {
+		a {
+			font-weight: bold;
+			color: #367047;
+		}
+	}
+}
+
+#projects {
+	.project {
+		button {
+			font-family: 'Montserrat', sans-serif;
+			font-size: inherit;
+	
+			background-color: transparent;
+			border: solid 1px #353535;
+			color: #353535;
+			padding: 10px;
+	
+			margin-bottom: 15px;
+	
+			transition: 0.4s;
+		}
+	
+		button:hover {
+			background-color: #353535;
+			border: solid 1px #353535;
+			color: #f7f6f5;
+			cursor: pointer;
+		}
+	
+		.details {
+			color: #367047;
+			font-weight: bold;
+		}
 	}
 }
 
 #contact {
 	margin-bottom: 25px;
-	
+
 	ul {
 		display: grid;
 		grid-template-rows: 1fr;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: ". el1 el2 .";
 
 		li {
 			align-self: center;
@@ -135,12 +160,15 @@ main {
 			font-size: 32px;
 			padding: 0 10px;
 		}
+
+		li:nth-child(1) { grid-area: el1; }
+		li:nth-child(2) { grid-area: el2; }
 	}
 }
 
 
 @media (min-width: 768px) {
-	section { margin-bottom: 30px; }
+	main section { padding-bottom: 20px; }
 	nav {
 		grid-template-areas: "title menu";
 		width: 100%;
@@ -156,16 +184,17 @@ main {
 		#menu {
 			display: block;
 			align-self: center;
-			background-color: white;
+			background-color: transparent;
 
 			ul li {
 				display: inline-block;
 				padding: 0 15px;
 				border-bottom: solid 2px transparent;
+				transition: 0.2s;
 			}
 			
 			ul li:hover {
-				border-bottom: solid 2px black;
+				border-bottom: solid 2px #367047;
 			}
 		}
 	}
@@ -176,6 +205,10 @@ main {
 		max-width: 1200px;
 		justify-self: center;
 		box-sizing: border-box;
+
+		.project button {	
+			margin-bottom: 0;
+		}
 	}
 
 	#about {
@@ -188,6 +221,11 @@ main {
 		h2 { grid-area: title; }
 		#photo { grid-area: photo; padding-right: 10px; }
 		#bio { grid-area: text; padding-left: 10px; }
+
+		#intro { 
+			font-size: 22px;
+			font-weight: bold;
+		}
 	}
 
 	#projects {
@@ -206,5 +244,13 @@ main {
 
 	#contact{
 		display: grid;
+
+		i {
+			transition: 0.4s;
+		}
+
+		ul li:hover i {
+			color: #367047;
+		}
 	}
 }
