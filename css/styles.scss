@@ -148,27 +148,20 @@ main {
 	}
 }
 
-#contact {
-	margin-bottom: 25px;
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-	ul {
-		display: grid;
-		grid-template-rows: 1fr;
-		grid-template-columns: repeat(2, 1fr);
+  .socials_item_link {
+    font-size: 30px;
+    padding: 5px;
+  }
 
-		li {
-			align-self: center;
-			justify-self: center;
-			
-			padding: 0 10px;
-
-			i {
-				font-size: 32px;
-			}
-		}
-
-
-	}
+  i {
+    color: #353535;
+  }
 }
 
 
@@ -248,25 +241,7 @@ main {
 			}
 		}
 	}
-
-	#contact{
-		display: grid;
-
-		i {
-			transition: 0.4s;
-		}
-
-		ul {
-
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: ". el1 el2 .";
-
-			li:nth-child(1) { grid-area: el1; }
-			li:nth-child(2) { grid-area: el2; }
-
-			li:hover i {
-				color: #367047;
-			}
-		}
-	}
 }
+
+
+

@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<meta name="author" content="Xavier Lopez Reynau">
-	<meta name="description" content="Full-Stack developer website based in Barcelona, Spain | Procedural animations | Web-based videogames | Web Development | Web Design | Web Automation">
+	<meta name="description"
+		content="Full-Stack developer website based in Barcelona, Spain | Procedural animations | Web-based videogames | Web Development | Web Design | Web Automation">
 
 	<meta property="og:title" content="Xavier Lopez Reynau - Full-Stack Developer">
-	<meta property="og:description" content="Full-Stack developer website based in Barcelona, Spain. Includes portfolio with some projects involving procedural animations, videogames, web development, web design and web automation.">
+	<meta property="og:description"
+		content="Full-Stack developer website based in Barcelona, Spain. Includes portfolio with some projects involving procedural animations, videogames, web development, web design and web automation.">
 	<meta property="og:image" content="images/foto.jpg">
 
-	<link rel="stylesheet" href="css/styles.min.css" type="text/css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105745462-1"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	gtag('config', 'UA-105745462-1');
+		gtag('config', 'UA-105745462-1');
 	</script>
 
 	<title>Xavier López Reynau</title>
 </head>
+
 <body>
 	<nav>
 		<h1 id="title">Xavier López Reynau</h1>
@@ -40,20 +45,34 @@
 			<ul>
 				<li><a href="#about">About me</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
 	<main>
 		<section id="about">
-			<h2>About me</h2>
-			<div id="photo"><img src="images/foto.jpg"></img></div>
+			<div id="photo">
+				<img src="images/full-photo.jpg"></img>
+			</div>
 			<div id="bio">
-				<p id="intro">Hello! My name is Xavi. I'm a Full-Stack Developer living in Barcelona, Spain.</p>
-				<p>I am currently finishing my degree in Computer Science at Universitat Politècnica de Catalunya and working at Barcelona Supercomputing Center (<a href="https://www.bsc.es/">BSC</a>) as a Research Intern.</p>
-				<p>In my free time I like to work on side projects involving some kind of art on the browser, like procedural animations (here is my <a href="https://github.com/Reynau/Animations">Animations</a> GitHub repository) or videogames (<a href="https://github.com/Reynau/BugWar">BugWar</a> for example). 
-					I am also very interested in design, web-development and web-automation (for example, using <a href="https://www.seleniumhq.org/">Selenium</a> and <a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a></a>).</p>
-			</div>		
+				<h2>Hey, I'm Xavi, nice to meet you!</h2>
+				<p>I'm a Software Developer passionate about design, society, and new technologies.</p>
+				<p class="mono small">I've worked in projects related to procedural art generation, videogames, simulation, societal challenges, web technologies, and design.</p>
+				<p class="mono small">If you want to get in touch, feel free to contact me by email!</p>
+				<ul class="socials">
+					<li class="socials_item">
+						<a href="https://github.com/Reynau" target="_blank" class="socials_item_link" title="Github">
+							<i class="fab fa-github" aria-hidden="true"></i>
+						</a>
+					</li>
+
+					<li class="socials_item">
+						<a href="mailto:xavi.lopez.reynau@gmail.com" target="_blank" class="socials_item_link"
+							title="Email">
+							<i class="far fa-envelope" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</section>
 		<section id="projects">
 			<h2>Projects</h2>
@@ -62,63 +81,63 @@
 					<h3>BugWar</h3>
 					<img src="images/bugwar.jpg"></img>
 					<p class="details">Javascript, Canvas</p>
-					<p>Browser multiplayer game. Get points by moving all around the map, spreading your team color and removing the enemies colors!</p>	
+					<p>Browser multiplayer game. Get points by moving all around the map, spreading your team color and
+						removing the enemies colors!</p>
 					<a class="button" target="_blank" href="https://github.com/Reynau/BugWar">View on GitHub</a>
 				</div>
 				<div class="project">
 					<h3>Definitely Not Hitman Go</h3>
 					<img src="images/hitmango.jpg"></img>
 					<p class="details">Unity, C++</p>
-					<p>Videogame developed for the university Videogames course. It's a replica of the Hitman Go game for mobile platforms.</p>	
+					<p>Videogame developed for the university Videogames course. It's a replica of the Hitman Go game
+						for mobile platforms.</p>
 					<a class="button" target="_blank" href="https://github.com/Reynau/Hitman-GO-3D">View on GitHub</a>
 				</div>
 				<div class="project">
 					<h3>Speak For You</h3>
 					<img src="images/myo.jpg"></img>
 					<p class="details">Android, Java, Myo</p>
-					<p>Mobile app that translates sign language to voice in real time, using Myo technology. S4U is a project developed during HackUPC.</p>	
+					<p>Mobile app that translates sign language to voice in real time, using Myo technology. S4U is a
+						project developed during HackUPC.</p>
 					<a class="button" target="_blank" href="https://github.com/Reynau/S4U">View on GitHub</a>
 				</div>
 				<div class="project">
 					<h3>Animations</h3>
 					<img src="images/storm.jpg"></img>
 					<p class="details">Javascript, Canvas</p>
-					<p>Procedural animations made using javascript and canvas. The image is from the <a target="_blank" href="http://lopezreynau.me/Animations/Storm/">Storm</a> animation.</p>	
+					<p>Procedural animations made using javascript and canvas. The image is from the <a target="_blank"
+							href="http://lopezreynau.me/Animations/Storm/">Storm</a> animation.</p>
 					<a class="button" target="_blank" href="https://github.com/Reynau/Animations">View on GitHub</a>
 				</div>
 				<div class="project">
 					<h3>Tiled to Pixi</h3>
 					<img src="images/tiledtopixi.jpg"></img>
 					<p class="details">Javascript, Pixi.js</p>
-					<p>Library that transforms a Tiled tmx map to a Pixi container ready to use, allowing to render a map created in Tiled app in any Pixi.js app.</p>	
+					<p>Library that transforms a Tiled tmx map to a Pixi container ready to use, allowing to render a
+						map created in Tiled app in any Pixi.js app.</p>
 					<a class="button" target="_blank" href="https://github.com/Reynau/tiled-to-pixi">View on GitHub</a>
 				</div>
 				<div class="project">
 					<h3>Kitten Token</h3>
 					<img src="images/ethereum.jpg"></img>
 					<p class="details">Javascript, Solidity</p>
-					<p>Kitten Token is an Ethereum Token created following the ERC20 standard. It was created just for fun and educational purposes.</p>	
+					<p>Kitten Token is an Ethereum Token created following the ERC20 standard. It was created just for
+						fun and educational purposes.</p>
 					<a class="button" target="_blank" href="https://github.com/Reynau/KittenToken">View on GitHub</a>
 				</div>
 			</div>
-			
-		</section>
-		<section id="contact">
-				<h2>Contact</h2>
-				<ul>
-					<li><a target="_blank" href="mailto:xavi.lopez.reynau@gmail.com"><i class="far fa-envelope"></i></a></li>
-					<li><a target="_blank" href="https://www.linkedin.com/in/xavier-lopez-reynau/"><i class="fab fa-linkedin"></i></a></li>
-				</ul>
+
 		</section>
 	</main>
 
 	<script>
 		var menu = document.getElementById("menu");
 
-		function switchMenu (btn) {
+		function switchMenu(btn) {
 			btn.classList.toggle("close");
 			menu.classList.toggle("visible");
 		}
 	</script>
 </body>
+
 </html>
